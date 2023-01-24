@@ -1,5 +1,4 @@
 data <- read.table(file = 'data/ulabox_orders_with_categories_partials_2017.csv', header = TRUE, sep = ",")
-print(head(data))
 
 data <- subset(data, round(data$Home.) > 0)
 result <- aggregate(data$order, by = list(round(data$Home.), data$weekday), FUN = length)

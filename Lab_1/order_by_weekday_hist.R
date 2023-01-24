@@ -1,5 +1,4 @@
 data <- read.table(file = 'data/ulabox_orders_with_categories_partials_2017.csv', header = TRUE, sep = ",")
-head(data)
 
 agg = aggregate(data$order, by = list(data$weekday), FUN = length)
 
